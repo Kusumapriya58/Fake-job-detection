@@ -1,0 +1,41 @@
+Ni@app.route("/dashboard")
+def dashboard():
+    if "user" not in session:
+        return redirect("/")
+
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+
+    c.execute("SELECT COUNT(*) FROM predictions")
+    total = c.fetchone()[0]
+
+    c.execute("SELECT COUNT(*) FROM predictions WHERE result='Fake'")
+    fake_jobs = c.fetchone()[0]
+
+    c.execute("SELECT COUNT(*) FROM predictions WHERE result='Real'")
+    real_jobs = c.fetchone()[0]
+
+    # FIX → Prevent crash when date is NULL
+    c.execute("""
+        SELECT date, COUNT(*) 
+        FROM predictions 
+        WHERE date IS NOT NULL
+        GROUP BY date 
+        ORDER BY date
+    """)
+    rows = c.fetchall()
+
+    dates = [row[0] for row in rows]
+    counts = [row[1] for row in rows]
+
+    conn.close()
+
+    return render_template(
+        "dashboard.html",
+        total=total,
+        fake=fake_jobs,
+        real=real_jobs,
+        dates=dates,
+        counts=counts
+    )
+   
