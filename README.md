@@ -1,11 +1,11 @@
-***Fake Job Detection Using NLP***
+🚀 Fake Job Detection Using NLP
 
 A Machine Learning project that detects fake job postings using Natural Language Processing (NLP) with a Flask-based web interface and admin dashboard.
 
 
 ---
 
-***Table of Contents***
+📌 Table of Contents
 
 Project Overview
 
@@ -29,11 +29,13 @@ Dataset
 
 Future Enhancements
 
+Author
+
 
 
 ---
 
-***Project Overview***
+📖 Project Overview
 
 Fake job postings are increasing across online platforms and often cause financial & personal risk to job seekers.
 This project uses Machine Learning + NLP to classify job descriptions as:
@@ -47,8 +49,10 @@ A Flask web app allows users to paste job text and get predictions in real-time 
 
 
 ---
-***Features***
- Machine Learning
+
+⭐ Features
+
+🧠 Machine Learning
 
 Logistic Regression classifier
 
@@ -59,13 +63,14 @@ TF-IDF vectorizer
 Predicts real vs fake job posts
 
 
-***Web Interface (Flask)***
+🌐 Web Interface (Flask)
+
 Simple & clean dark-theme UI
 
 Paste job description → Get prediction instantly
 
 
- Admin Panel
+🔐 Admin Panel
 
 Login system
 
@@ -73,7 +78,8 @@ Admin dashboard
 
 Fake/real job statistics
 
-Dashboard Stats
+
+📊 Dashboard Stats
 
 Total predictions
 
@@ -83,7 +89,7 @@ Fake vs Real detected
 
 ---
 
-***Tech Stack***
+🛠 Tech Stack
 
 Component	Technology
 
@@ -98,7 +104,7 @@ UI	HTML, CSS (Dark UI)
 
 ---
 
- ****Project Structure****
+📂 Project Structure
 
 project/
 │── app.py
@@ -118,21 +124,21 @@ project/
 
 ---
 
-***Installation***
+⚙ Installation
 
- Clone the Repository
+⿡ Clone the Repository
 
 git clone https://github.com/your-username/fake-job-detection.git
 cd fake-job-detection
 
-* Install Dependencies
+⿢ Install Dependencies
 
 pip install flask scikit-learn joblib pandas numpy
 
 
 ---
 
- Model Training
+🧪 Model Training
 
 Run the training script:
 
@@ -148,7 +154,7 @@ These files are used during prediction in the web app.
 
 ---
 
-Run the Web App
+🚀 Run the Web App
 
 Start the Flask app:
 
@@ -161,13 +167,13 @@ http://127.0.0.1:5000/
 
 ---
 
- **How It Works**
+🔍 How It Works
 
- Input
+✨ Input
 
 User pastes a job description text.
 
-*Processing
+⚙ Processing
 
 1. Text cleaned (punctuation, URLs, HTML, lowercase).
 
@@ -182,7 +188,7 @@ User pastes a job description text.
 
 
 
- Output
+📤 Output
 
 Example:
 
@@ -192,7 +198,7 @@ Confidence: 92.13%
 
 ---
 
- ***Admin Panel***
+🔐 Admin Panel
 
 Login
 
@@ -211,7 +217,7 @@ Real jobs detected
 
 ---
 
-**Dataset**
+📊 Dataset
 
 This project uses the Fake Job Postings dataset from Kaggle.
 It contains job descriptions labeled as:
@@ -224,7 +230,7 @@ It contains job descriptions labeled as:
 
 ---
 
-**Future Enhancements**
+🚧 Future Enhancements
 
 Add deep learning (BERT / LSTM)
 
@@ -235,5 +241,8 @@ Add chart-based analytics
 Deploy on Render / Railway / AWS
 
 Add email alert for suspicious posts
+
+
+
 
 
